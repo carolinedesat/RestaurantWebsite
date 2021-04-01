@@ -1,0 +1,71 @@
+/*JUMBOTRON*/
+.jumbotron {
+  background-color: hsl(81, 25%, 73%);
+  color: hsl(99, 10%, 28%);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 30px;
+  height: 150px;
+}
+
+/*ALL INPUT FIELDS*/
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid hsl(81, 25%, 73%);
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /*SUBMIT BUTTON*/
+  input[type=submit] {
+    background-color: hsl(149, 21%, 45%);
+    color: white;
+  }
+  
+  /*CONTAINER FOR INPUTS*/
+  .container {
+    background-color: hsl(81, 25%, 73%);
+    padding: 20px;
+  }
+  
+  /*THE MESSAGE BOX IS SHOWN WHEN THE USER CLICKS ON THE PASSWORD FIELD*/
+  #message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  #message p {
+    padding: 10px 35px;
+    font-size: 20px;
+  }
+  
+  /*ADD A GREEN TEXT COLOR AND A CHECKMARK WHEN THE REQUIREMENTS ARE RIGHT*/
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10004;";
+  }
+  
+  /*ADD A RED TEXT COLOR AND AN "X" ICON WHEN THE REQUIREMENTS ARE WRONG*/
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10006;";
+  }
