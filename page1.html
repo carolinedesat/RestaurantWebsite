@@ -11,15 +11,18 @@
 </head>
 
 <body>
+
     <div class="header">
-        <h1>Billy's Bistro</h1>
+        <h1>Carol's Bistro</h1>
     </div>
 
     <!--STAFF PASSWORD VALIDATOR-->
 
     <section id="section1">
         <div class="container">
-            <form action="/action_page.php">
+            <form action="page2.html">
+                <h3 style="text-align: center;">Enter valid username and password to access page 2</h3>
+                <br>
                 <label for="user">Username</label>
                 <input type="text" name="user" id="user">
 
@@ -49,8 +52,139 @@
         <div id="output"></div>
     </section>
 
+    <!--MENU-->
+
+    <section id="section3">
+        <div id="menu">
+            <table>
+                <!--TABLE'S TOP ROW-->
+                <tr>
+                    <th class="title">Starters</th>
+                    <th>&nbsp;</th>
+                    <th class="title">Desserts</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>Soup of the Day</strong><br>
+                            Served in a bread bowl, please check with server €6.50</p>
+                    </td>
+                    <td>
+                        <input name="qnt1" type="text" id="qnt1" value="0" size="3" data-price="6.50">
+                    </td>
+                    <td>
+                        <p><strong>Chocolate Brownie</strong><br>
+                            Served with ice cream €6</p>
+                    </td>
+                    <td>
+                        <input name="qnt2" type="text" id="qnt2" value="0" size="3" data-price="6">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>Loaded Potato Skins</strong><br>
+                            Stuffed with pimento cheese and topped with pulled ham, cheddar cheese and homemade trufe
+                            aioli €7.50</p>
+                    </td>
+                    <td>
+                        <input name="qnt3" type="text" id="qnt3" value="0" size="3" data-price="7.50">
+                    </td>
+                    <td>
+                        <p><strong>Tiramisu</strong><br>
+                            An elegant and rich layered italian dessert made with delicate ladyfinger cookies, espresso,
+                            mascarpone cheese, marsala wine, rum and cocoa powder €8</p>
+                    </td>
+                    <td>
+                        <input name="qnt4" type="text" id="qnt4" value="0" size="3" data-price="8">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>Goat's Cheese Salad</strong><br>
+                            Mixed leaves, walnuts, red onions, creamy goats cheese, beetroot, vinagrette dressing €7</p>
+                    </td>
+                    <td>
+                        <input name="qnt5" type="text" id="qnt5" value="0" size="3" data-price="7">
+                    </td>
+                    <td>
+                        <p><strong>Fruit Salad</strong><br>
+                            Pineapple, melon, orange, kiwi, strawberry in a sweet and zesty dressing €5</p>
+                    </td>
+                    <td>
+                        <input name="qnt6" type="text" id="qnt6" value="0" size="3" data-price="5">
+                    </td>
+                </tr>
+                <!--TABLE'S BOTTOM ROW-->
+                <tr>
+                    <th class="title">Mains</th>
+                    <th>&nbsp;</th>
+                    <th class="title">Drinks</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>Fish & Chips</strong><br>
+                            Fresh haddock in beer batter, homemade tartar sauce, mint mushy peas and twice cooked chips
+                            €16</p>
+                    </td>
+                    <td>
+                        <input name="qnt7" type="text" id="qnt7" value="0" size="3" data-price="16">
+                    </td>
+                    <td>
+                        <p><strong>Whiskey Sour</strong><br>
+                            Whiskey, Fresh Lemon Juice, Egg White, Sugar Syrup and Bitters €12</p>
+                    </td>
+                    <td>
+                        <input name="qnt8" type="text" id="qnt8" value="0" size="3" data-price="12">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>Beef and Guinness Stew</strong><br>
+                            Tender Irish beef braised with root vegetables and creamy mash potato €14</p>
+                    </td>
+                    <td>
+                        <input name="qnt9" type="text" id="qnt9" value="0" size="3" data-price="14">
+                    </td>
+                    <td>
+                        <p><strong>Gin Bramble</strong><br>
+                            Gin, Crème de Mure, Lemon Juice, Fresh Blackberry and Raspberry and Sugar Syrup €12</p>
+                    </td>
+                    <td>
+                        <input name="qnt10" type="text" id="qnt10" value="0" size="3" data-price="12">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>Falafel Burguer</strong><br>
+                            Spicy chickpeas & baked sweet potato patty, hummus, brioche bun, mint & coriander relish,
+                            tomato, baby gem and twice cooked chips €13.50</p>
+                    </td>
+                    <td>
+                        <input name="qnt11" type="text" id="qnt11" value="0" size="3" data-price="13.50">
+                    </td>
+                    <td>
+                        <p><strong>Espresso Martini</strong><br>
+                            Vodka, Kahlua, Galliano, Fresh Espresso €12</p>
+                    </td>
+                    <td>
+                        <input name="qnt12" type="text" id="qnt12" value="0" size="3" data-price="12">
+                    </td>
+                </tr>
+            </table>
+    </section>
+    <!--OVERALL BILL-->
+    <div id="bill">
+        <p class="total">&nbsp;</p>
+        <p class="title">Overall Bill:</p>
+        <p class="total">
+        <div id="ItemsTotal"><strong>€0.0</strong></div>
+        </p>
+    </div>
+
     <!--MY JS-->
     <script src="js/script.js"></script>
+
 </body>
 
 </html>

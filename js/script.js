@@ -49,7 +49,7 @@ myInput.onkeyup = function() {
     number.classList.add("invalid");
   }
   
-  // Validates length
+  //validates length
   if(myInput.value.length >= 8) {
     length.classList.remove("invalid");
     length.classList.add("valid");
@@ -87,3 +87,24 @@ function getRandom() {
 
     })
 }
+
+/*
+  MENU
+*/
+
+var total_items = 12;
+
+function CalculateItemsValue(){
+    var total = 0;
+
+    for (let i = 1; i <= total_items; i++) {
+       itemID = document.getElementById("qnt" + i);
+       total = total + parseFloat(itemID.value) * parseFloat(itemID.getAttribute("data-price"));
+        
+    }
+    document.getElementById('ItemsTotal').innerHTML = "€" + total;
+}
+
+document.querySelectorAll('[id^="qnt"]').forEach(item => {
+    item.addEventListener('keyup', CalculateItemsValue);
+});
