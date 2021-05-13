@@ -4,7 +4,7 @@
 
 /*background image and font for the body element*/
 body {
-  background-image: url(/img/new-back1.jpg);
+  background-image: url(/img/front-page-restaurant2.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -206,6 +206,7 @@ h4 {
 #output {
   color: black;
   font-size: 15px;
+  font-weight: bold;
   text-align: center;
   padding: 20px;
 }
@@ -249,30 +250,31 @@ th, tr, td {
   PAGE 2
 */
 
+/*styling and positioning the page container*/
 .grid-container {
-  background: #D5C9C7;
   opacity: 0.0;
   display: grid;
   grid-auto-flow: row;
   grid-gap: 1em;
-  grid-template-columns: auto auto;
-	grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto auto auto;
   align-content: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 50px;
+  padding: 10px;
   margin: 50px 200px;
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.788);
 }
 
+/*styling and positioning items inside the page container*/
 .grid-item {
   padding: 20px;
-  text-align: center;
+  font-size: 2px;
 }
 
+/*styling and positioning the food images*/
 .foodimages {
   position: relative;
+  cursor: pointer;
   width: 200px;
   height: 200px;
   margin: 10px;
@@ -280,29 +282,58 @@ th, tr, td {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.788);
 }
 
+/*styling and positioning the "welcome to the animation page" block*/
+.welcome {
+  background: #D5C9C7;
+  opacity: 0.8;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  width: 600px;
+  height: fit-content;
+  padding: 20px;
+  margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.788);
+}
+
+.steps:hover {background-color: #9DA3AA;}
+
+/*styling and positioning the "click me" button*/
 .clickme {
-  background-color: #9B9E87;
-  color: white;
+  background-color: #D5C9C7;
+  opacity: 0.8;
+  color: #513B2A;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   border: none;
-  margin: 50px 200px;
+  margin: 50px auto;
   padding: 10px;
   border-radius: 5px;
-  width: 800px;
+  width: 300px;
 }
 
-#t4 {
- display: none;
+.clickme:hover {background-color: #9DA3AA;}
+
+.clickme:active {
+  background-color: #9B9E87;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.788);
+  transform: translateY(10px);
 }
 
-#t5 {
-  display: none;
+.title2 {
+  color: white;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 35px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
 }
 
+/*styling and positioning the booking information block*/
 .booking {
   background: #D5C9C7;
   opacity: 0.8;
