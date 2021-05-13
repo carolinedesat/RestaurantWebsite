@@ -116,16 +116,6 @@ var vegetarian = document.getElementById("qnt10")
 
 function menuSum() { //creates the function that will be called inside each input tag
 
-  //stores the vegetarian dishes inside the "isVeg" variable using boolean values
-  var isVeg = {
-    cheeseSalad: true,
-    falafel: true,
-    soup: false,
-    potato: false,
-    fish: false,
-    beef: false
-  }
-
   //stores the quanity input multiplied by the data-price inside a suitable variable
   var totalSoup = soup.value * soup.getAttribute("data-price");
   var totalPotato = potato.value * potato.getAttribute("data-price");
