@@ -47,7 +47,7 @@
 
         <!--MENU-->
         <section class="menu">
-            <div>
+            <div id="starters">
                 <h2 class="title">Starters</h2>
 
                 <article>
@@ -56,8 +56,8 @@
                         <p>Served in a bread bowl, please check with server €6.50</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt1" type="text" id="qnt1" value="0" size="3" data-price="6.50"
-                            data-type="nonveg">
+                        <input name="qnt1" type="text" id="qnt1" value="0" size="3" data-price="6.50" data-type="nonveg"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
 
@@ -68,8 +68,8 @@
                             aioli €7.50</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt3" type="text" id="qnt2" value="0" size="3" data-price="7.50"
-                            data-type="nonveg">
+                        <input name="qnt2" type="text" id="qnt2" value="0" size="3" data-price="7.50" data-type="nonveg"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
 
@@ -79,12 +79,13 @@
                         <p> Mixed leaves, walnuts, red onions, creamy goats cheese, beetroot, vinagrette dressing €7</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt5" type="text" id="qnt3" value="0" size="3" data-price="7" data-type="veg">
+                        <input name="qnt3" type="text" id="qnt3" value="0" size="3" data-price="7.00" data-type="veg"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
             </div>
 
-            <div>
+            <div id="mains">
                 <h2 class="title">Mains</h2>
 
                 <article>
@@ -94,7 +95,8 @@
                             €16</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt7" type="text" id="qnt4" value="0" size="3" data-price="16" data-type="nonveg">
+                        <input name="qnt4" type="text" id="qnt4" value="0" size="3" data-price="16.00" data-type="nonveg"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
 
@@ -104,7 +106,8 @@
                         <p>Tender Irish beef braised with root vegetables and creamy mash potato €14</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt9" type="text" id="qnt5" value="0" size="3" data-price="14" data-type="nonveg">
+                        <input name="qnt5" type="text" id="qnt5" value="0" size="3" data-price="14.00" data-type="nonveg"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
 
@@ -115,13 +118,13 @@
                             tomato, baby gem and twice cooked chips €13.50</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt11" type="text" id="qnt6" value="0" size="3" data-price="13.50"
-                            data-type="veg">
+                        <input name="qnt6" type="text" id="qnt6" value="0" size="3" data-price="13.50" data-type="veg"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
             </div>
 
-            <div>
+            <div id="desserts">
                 <h2 class="title">Desserts</h2>
 
                 <article>
@@ -130,7 +133,8 @@
                         <p>Served with ice cream €6</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt2" type="text" id="qnt7" value="0" size="3" data-price="6">
+                        <input name="qnt7" type="text" id="qnt7" value="0" size="3" data-price="6.00"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
 
@@ -141,7 +145,8 @@
                             mascarpone cheese, marsala wine, rum and cocoa powder €8</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt4" type="text" id="qnt8" value="0" size="3" data-price="8">
+                        <input name="qnt8" type="text" id="qnt8" value="0" size="3" data-price="8.00"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
 
@@ -151,12 +156,13 @@
                         <p>Pineapple, melon, orange, kiwi, strawberry in a sweet and zesty dressing €5</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt6" type="text" id="qnt9" value="0" size="3" data-price="5">
+                        <input name="qnt9" type="text" id="qnt9" value="0" size="3" data-price="5.00"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
             </div>
 
-            <div>
+            <div id="drinks">
                 <h2 class="title">Drinks</h2>
 
                 <article>
@@ -165,7 +171,8 @@
                         <p>Whiskey, Fresh Lemon Juice, Egg White, Sugar Syrup and Bitters €12</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt8" type="text" id="qnt10" value="0" size="3" data-price="12">
+                        <input name="qnt10" type="text" id="qnt10" value="0" size="3" data-price="12.00"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
 
@@ -175,7 +182,8 @@
                         <p>Gin, Crème de Mure, Lemon Juice, Fresh Blackberry and Raspberry and Sugar Syrup €12</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt10" type="text" id="qnt11" value="0" size="3" data-price="12">
+                        <input name="qnt11" type="text" id="qnt11" value="0" size="3" data-price="12.00"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
 
@@ -185,7 +193,8 @@
                         <p>Vodka, Kahlua, Galliano, Fresh Espresso €12</p>
                     </div>
                     <div class="qnt">
-                        <input name="qnt12" type="text" id="qnt12" value="0" size="3" data-price="6.50">
+                        <input name="qnt12" type="text" id="qnt12" value="0" size="3" data-price="12.00"
+                        onkeyup="menuSum()">
                     </div>
                 </article>
             </div>
@@ -203,8 +212,8 @@
                 <!--first row-->
                 <tr>
                     <td>
-                        <p class="total"><strong>Starters</strong></p>
-                        <p class="total">
+                        <p class="starterstotal"><strong>Starters</strong></p>
+                        <p class="starterstotal">
                         <div id="StartersTotal">€0.0</div>
                         </p>
                     </td>
@@ -215,7 +224,6 @@
                         </p>
                     </td>
                 </tr>
-                <!--second row-->
                 <tr>
                     <td>
                         <p class="total"><strong>Desserts</strong></p>
@@ -230,7 +238,6 @@
                         </p>
                     </td>
                 </tr>
-                <!--third row-->
                 <tr>
                     <td>
                         <p class="total"><strong>Vegetarian</strong></p>
@@ -245,7 +252,6 @@
                         </p>
                     </td>
                 </tr>
-                <!--fourth row-->
                 <tr>
                     <td>
                         <p class="total"><strong>Overall Bill</strong></p>

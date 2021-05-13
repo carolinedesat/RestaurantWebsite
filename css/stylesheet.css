@@ -4,7 +4,7 @@
 
 /*background image and font for the body element*/
 body {
-  background-image: url(/img/front-page-restaurant.jpg);
+  background-image: url(/img/new-back1.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,14 +27,12 @@ body {
 
 /*styling the header*/
 .header {
-  color: white;
+  color: #D5C9C7;
   font-family: 'Brush Script MT', cursive;
   font-size: 35px;
   font-weight: bold;
   font-style: italic;
   text-align: center;
-  padding: 1px;
-
 }
 
 /*
@@ -43,8 +41,8 @@ body {
 
 /*styling and positioning the password section*/
 .login {
-  background: #C0C2C0;
-  opacity: 0.9;
+  background: #D5C9C7;
+  opacity: 0.8;
   justify-self: center;
   max-width: 400px;
   height: 300px;
@@ -66,7 +64,7 @@ input {
 
 /*styling and positioning the submit button*/
 input[type=submit] {
-  background-color: #7DB2B6;
+  background-color: #9B9E87;
   color: white;
   font-size: 15px;
   font-weight: bold;
@@ -113,8 +111,8 @@ input[type=submit] {
 
 /*styling and positioning the menu*/
 .menu {
-  background: #C0C2C0;
-  opacity: 0.9;
+  background: #D5C9C7;
+  opacity: 0.8;
   width: 100%;
   max-width: 700px;
   height: fit-content;
@@ -125,7 +123,7 @@ input[type=submit] {
 
 /*styling and positioning the menu titles*/
 .title {
-  color: #3C4F51;
+  color: #513B2A;
   font-family: 'Brush Script MT', cursive;
   font-size: 35px;
   font-weight: bold;
@@ -179,8 +177,8 @@ h4 {
   grid-row-start: 2;
   grid-row-end: 3;
 
-  background: #C0C2C0;
-  opacity: 0.9;
+  background: #D5C9C7;
+  opacity: 0.8;
   max-width: 500px;
   height: 850px;
   padding: 30px;
@@ -191,7 +189,7 @@ h4 {
 
 /*styling and positioning the random user generator button*/
 #getRandom {
-  background-color: #7DB2B6;
+  background-color: #9B9E87;
   color: white;
   cursor: pointer;
   font-size: 15px;
@@ -223,12 +221,12 @@ h4 {
   grid-row-start: 3;
   grid-row-end: 4;
 
-  background: #C0C2C0;
-  opacity: 0.9;
+  background: #D5C9C7;
+  opacity: 0.8;
   justify-content: center;
   text-align: center;
   max-width: 500px;
-  height: 330px;
+  height: 343px;
   padding: 50px;
   margin-top: 20px;
   border-radius: 5px;
@@ -251,60 +249,26 @@ th, tr, td {
   PAGE 2
 */
 
-.clickme1 {
-  background-color: #7DB2B6;
-  color: white;
-  cursor: pointer;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  width: 200px;
-  padding: 10px;
+.grid-container {
+  background: #D5C9C7;
+  opacity: 0.0;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1em;
+  grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 50px;
+  margin: 50px 200px;
   border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.788);
 }
 
-.clickme2 {
-  background-color: #7DB2B6;
-  color: white;
-  cursor: pointer;
-  font-size: 30px;
-  font-weight: bold;
+.grid-item {
+  padding: 20px;
   text-align: center;
-  text-decoration: none;
-  border: none;
-  width: 200px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.clickme3 {
-  background-color: #7DB2B6;
-  color: white;
-  cursor: pointer;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  width: 200px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.clickme4 {
-  background-color: #7DB2B6;
-  color: white;
-  cursor: pointer;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  width: 200px;
-  padding: 10px;
-  border-radius: 5px;
 }
 
 .foodimages {
@@ -316,24 +280,41 @@ th, tr, td {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.788);
 }
 
-.grid-container {
-  background: #C0C2C0;
-  opacity: 0.9;
-  display: grid;
-  grid-auto-flow: row;
-  grid-gap: 1em;
-  grid-template-columns: auto auto;
-	grid-template-rows: auto auto;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 50px;
-  margin: 50px 500px;
+.clickme {
+  background-color: #9B9E87;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  margin: 50px 200px;
+  padding: 10px;
   border-radius: 5px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.788);
+  width: 800px;
 }
 
-.grid-item {
-  padding: 20px;
+#t4 {
+ display: none;
+}
+
+#t5 {
+  display: none;
+}
+
+.booking {
+  background: #D5C9C7;
+  opacity: 0.8;
+  color: black;
+  display: none;
+  font-size: 20px;
   text-align: center;
+  width: 100%;
+  max-width: 700px;
+  height: fit-content;
+  padding: 20px;
+  margin: 100px auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.788);
 }
