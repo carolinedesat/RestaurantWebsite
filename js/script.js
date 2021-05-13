@@ -93,39 +93,82 @@ function getRandom() { //creates the function that will be called
   MENU
 */
 
-//overall bill
-var total_items = 12;
+//stores the id="qntx" from the input tag inside a suitable variable
+//starters
+var soup = document.getElementById("qnt1")
+var potato = document.getElementById("qnt2")
+var cheeseSalad = document.getElementById("qnt3")
+//mains
+var fish = document.getElementById("qnt4")
+var beef = document.getElementById("qnt5")
+var falafel = document.getElementById("qnt6")
+//desserts
+var chocolat = document.getElementById("qnt7")
+var tiramisu = document.getElementById("qnt8")
+var fruitSalad = document.getElementById("qnt9")
+//drinks
+var whiskey = document.getElementById("qnt10")
+var gin = document.getElementById("qnt11")
+var espresso = document.getElementById("qnt12")
+//vegetarian
+var vegetarian = document.getElementById("qnt10")
 
-function CalculateItemsValue() { //creates the function that will be called
-  var total = 0;
+function menuSum() { //creates the function that will be called inside each input tag
 
-  for (let i = 1; i <= total_items; i++) {
-    itemID = document.getElementById("qnt" + i);
-    total = total + parseFloat(itemID.value) * parseFloat(itemID.getAttribute("data-price"));
-
+  //stores the vegetarian dishes inside the "isVeg" variable
+  var isVeg = {
+    cheeseSalad: true,
+    falafel: true,
+    soup: false,
+    potato: false,
+    fish: false,
+    beef: false
   }
-  document.getElementById('ItemsTotal').innerHTML = "€" + total;
+
+  //stores the quanity input multiplied by the data-price inside a suitable variable
+  var totalSoup = soup.value * soup.getAttribute("data-price");
+  var totalPotato = potato.value * potato.getAttribute("data-price");
+  var totalCheeseSalad = cheeseSalad.value * cheeseSalad.getAttribute("data-price");
+  //sums all the starters and stores the result inside a suitable variable
+  var starterTotal = totalSoup + totalPotato + totalCheeseSalad;
+
+  //stores the quantity input multiplied by the data-price inside a suitable variable
+  var totalfish = fish.value * fish.getAttribute("data-price");
+  var totalbeef = beef.value * beef.getAttribute("data-price");
+  var totalfalafel = falafel.value * falafel.getAttribute("data-price");
+  //sums all the mains and stores the result inside a suitable variable
+  var mainTotal = totalfish + totalbeef + totalfalafel;
+
+  //stores the quantity input multiplied by the data-price inside a suitable variable
+  var totalchocolat = chocolat.value * chocolat.getAttribute("data-price");
+  var totaltiramisu = tiramisu.value * tiramisu.getAttribute("data-price");
+  var totalfruitSalad = fruitSalad.value * fruitSalad.getAttribute("data-price");
+  //sums all the desserts and stores the result inside a suitable variable
+  var dessertTotal = totalchocolat + totaltiramisu + totalfruitSalad;
+
+  //stores the quantity input multiplied by the data-price inside a suitable variable
+  var totalwhiskey = whiskey.value * whiskey.getAttribute("data-price");
+  var totalgin = gin.value * gin.getAttribute("data-price");
+  var totalespresso = espresso.value * espresso.getAttribute("data-price");
+  //sums all the drinkss and stores the result inside a suitable variable
+  var drinksTotal = totalwhiskey + totalgin + totalespresso;
+
+  //IsVeg equals the sum of all vegetarian dishes
+  var isVeg = totalCheeseSalad + totalfalafel
+  //nonVeg equals the sum of all non-vegetarian dishes
+  var nonVeg = totalSoup + totalPotato + totalfish + totalbeef
+
+  //the overall bill equals the sum of all categories together
+  var totalOverallbill = starterTotal + mainTotal + dessertTotal + drinksTotal;
+
+  //output
+  //changes the bill value from "€0.0" to the totals calculated above
+  document.getElementById('StartersTotal').innerHTML = "€" + starterTotal;
+  document.getElementById('MainsTotal').innerHTML = "€" + mainTotal;
+  document.getElementById('DessertsTotal').innerHTML = "€" + dessertTotal;
+  document.getElementById('DrinksTotal').innerHTML = "€" + drinksTotal;
+  document.getElementById('ItemsTotal').innerHTML = "€" + totalOverallbill;
+  document.getElementById('VegTotal').innerHTML = "€" + isVeg;
+  document.getElementById('NonVegTotal').innerHTML = "€" + nonVeg;
+
 }
-
-document.querySelectorAll('[id^="qnt"]').forEach(item => {
-  item.addEventListener('keyup', CalculateItemsValue);
-});
-
-//starters, mains, desserts and drinks bill
-function GetCategoryTotal(categoryDivId) {
-  inputs = document.getElementById(categoryDivId).getElementsByTagName('input');
-  var categoryTotal = 0;
-
-  for (let i = 1; i <= inputs.count; i++) {
-      item = inputs[i]
-      categoryTotal = categoryTotal + parseFloat(item.value) * parseFloat(item.getAttribute("data-price"));
-  }
-  
-  return categoryTotal;
-}
-
-document.getElementById('StartersTotal').innerHTML = "€" + GetCategoryTotal("starters");
-document.getElementById('MainsTotal').innerHTML = "€" + GetCategoryTotal("mains");
-document.getElementById('DessertsTotal').innerHTML = "€" + GetCategoryTotal("desserts");
-document.getElementById('DrinksTotal').innerHTML = "€" + GetCategoryTotal("drinks");
-
