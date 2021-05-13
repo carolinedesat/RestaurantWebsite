@@ -1,144 +1,74 @@
 /*
-  "SHOW THE MENU" BUTOON ANIMATION
+  "CLICK ME" BUTOON ANIMATION
 */
 
+//when the button is clicked
 $(document).ready(function () {
   $(".clickme").click(function () {
-    $(".grid-container").animate({ opacity: "1.0" });
+    $(".container").animate({ height: 'toggle' }); //the button itself and the "welcome" block will toggle up
+    $(".grid-container").animate({ opacity: "0.9" }); //the animation container will appear
   });
-});
-
-$(".clickme").click(function () {
-  $(".clickme").fadeOut();
 });
 
 /*
   FIRST BLOCK (STARTERS) ANIMATION
 */
 
-//everytime the soup is clicked, all images will toggle to the left
+//when the soup is clicked, all images and title will disappear
 $(document).ready(() => {
   $("#div1").click(() => {
-    $("#div1").animate({
-      width: 'toggle'
-    });
+    $("#div1").animate({ opacity: "0.0" });
+    $("#div2").animate({ opacity: "0.0" });
+    $("#div3").animate({ opacity: "0.0" });
+    $("#t1").animate({ opacity: "0.0" });
   });
-});
-
-$(document).ready(() => {
-  $("#div1").click(() => {
-    $("#div2").animate({
-      width: 'toggle'
-    });
-  });
-});
-
-$(document).ready(() => {
-  $("#div1").click(() => {
-    $("#div3").animate({
-      width: 'toggle'
-    });
-  });
-});
-
-//everytime the soup is clicked, the title will fade out
-$("#div1").click(function () {
-  $("#t1").fadeOut();
 });
 
 /*
   SECOND BLOCK (MAINS) ANIMATION
 */
 
-//everytime the burguer is clicked, all images will toggle to the top
+//when the stew is clicked
 $(document).ready(() => {
-  $("#div6").click(() => {
-    var div = $("#div4");
-    div.animate({ height: 'toggle' }, "slow");
-
+  $("#div5").click(() => {
+    $("#div4").animate({ width: 'toggle' }, "slow"); //the fish and chips will toggle to the side
+    $("#div5").animate({ height: 'toggle' }, "slow"); //the stew will toggle up
+    $("#div6").animate({ opacity: "0.0" }); //the falafel burguer and title will disappear
+    $("#t2").animate({ opacity: "0.0" }); //the title will desappear
   });
-});
-
-$(document).ready(() => {
-  $("#div6").click(() => {
-    var div = $("#div5");
-    div.animate({ height: 'toggle' }, "slow");
-
-  });
-});
-
-$(document).ready(() => {
-  $("#div6").click(() => {
-    var div = $("#div6");
-    div.animate({ height: 'toggle' }, "slow");
-
-  });
-});
-
-//everytime the soup is clicked, the title will fade out
-$("#div6").click(function () {
-  $("#t2").fadeOut();
 });
 
 /*
   THIRD BLOCK (DESSERTS) ANIMATION
 */
 
-$(document).ready(function () {
-  $("#div7").click(function () {
-    $("#div7").animate({ opacity: "0.0" });
+//when the brownie is clicked
+$(document).ready(() => {
+  $("#div7").click(() => {
+    $("#div7").animate({ width: 'toggle' }, "slow"); //the brownie will toggle to the side
+    $("#div8").animate({ opacity: "0.0" }); //the tiramisu will disappear
+    $("#div9").animate({ width: 'toggle' }, "fast"); //the fruit salad will toggle to the side
+    $("#t3").animate({ opacity: "0.0" }); //the title will desappear
   });
-  $("#div8").click(function () {
-    $("#div8").animate({ opacity: "0.0" });
-  });
-  $("#div9").click(function () {
-    $("#div9").animate({ opacity: "0.0" });
-  });
-});
-
-$("#div7").click(function () {
-  $("#t3").fadeOut();
-  $("#t4").fadeIn();
-});
-
-$("#div8").click(function () {
-  $("#t4").fadeOut();
-  $("#t5").fadeIn();
-});
-
-$("#div9").click(function () {
-  $("#t5").fadeOut();
 });
 
 /*
   FOURTH BLOCK (DRINKS) ANIMATION
 */
 
-$(document).ready(() => {
-  $("#div10").click(() => {
-    var div = $("#div10");
-    div.animate({ width: 'toggle' }, "slow");
-
+$(document).ready(function () {
+  $("#div10").click(function () { //when the whiskey sour is clicked
+    $("#div10").animate({ opacity: "0.0" }); //the whiskey sour will disappear
+    $("#t4").animate({ opacity: "0.0" }); //the title will desappear
+  });
+  $("#div11").click(function () { //when the gin bamble is clicked
+    $("#div11").animate({ opacity: "0.0" }); //the gin bamble will disappear
   });
 });
 
-$(document).ready(() => {
-  $("#div10").click(() => {
-    var div = $("#div11");
-    div.animate({ width: 'toggle' }, "slow");
-
+$(document).ready(function () {
+  $("#div12").click(function () { //when the expresso martini is clicked
+    $(".grid-container").hide(); //the whole container will be hidden
+    $(".booking").show(); //the booking information block will be shown
   });
-});
-
-$(document).ready(() => {
-  $("#div10").click(() => {
-    var div = $("#div12");
-    div.animate({ width: 'toggle' }, "slow");
-
-  });
-});
-
-$("#div10").click(function () {
-  $("#t6").fadeOut();
-  $(".booking").fadeIn();
 });
