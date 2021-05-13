@@ -4,7 +4,7 @@
 
 /*background image and font for the body element*/
 body {
-  background-image: url(/img/front-page-restaurant2.jpg);
+  background-image: url(../img/front-page-restaurant2.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
