@@ -316,7 +316,7 @@ footer {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.788);
 }
 
-.steps:hover {background-color: #9DA3AA;}
+.welcome:hover {background-color: #9DA3AA;}
 
 /*styling and positioning the "start" button*/
 .clickme {
